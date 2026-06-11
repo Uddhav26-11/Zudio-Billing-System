@@ -11,7 +11,7 @@ export default function Login() {
 
   const login = async () => {
     try {
-      const res = await axios.post("https://zudio-billing-system-1.onrender.com", {
+      const res = await axios.post("https://zudio-billing-system-1.onrender.com/api/auth/login", {
         email,
         password,
       });
