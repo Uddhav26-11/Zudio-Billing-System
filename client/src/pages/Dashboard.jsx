@@ -16,9 +16,9 @@ export default function Dashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      const productRes = await axios.get("http://localhost:5000/api/products");
+      const productRes = await axios.get("https://zudio-billing-system-1.onrender.com");
 
-      const billRes = await axios.get("http://localhost:5000/api/bills", {
+      const billRes = await axios.get("https://zudio-billing-system-1.onrender.com", {
         headers: {
           Authorization: "Bearer " + token,
         },

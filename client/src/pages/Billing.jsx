@@ -14,7 +14,7 @@ export default function Billing() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://zudio-billing-system-1.onrender.com");
       setProducts(res.data);
     } catch (error) {
       console.log(error);
@@ -127,7 +127,7 @@ export default function Billing() {
       }));
 
       const res = await axios.post(
-        "http://localhost:5000/api/bills",
+        "https://zudio-billing-system-1.onrender.com",
         {
           products: billProducts,
           paymentMethod: "Cash",
