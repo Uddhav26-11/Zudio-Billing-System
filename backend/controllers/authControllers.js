@@ -1,7 +1,5 @@
 const User = require("../models/User");
-
 const bcrypt = require("bcryptjs");
-
 const jwt = require("jsonwebtoken");
 
 const login = async (req, res) => {
@@ -16,12 +14,6 @@ const login = async (req, res) => {
         message: "User not found"
       });
     }
-
-    if (password !== user.password) {
-  return res.status(400).json({
-    message: "Wrong password"
-  });
-}
 
     const token = jwt.sign(
       {
